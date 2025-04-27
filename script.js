@@ -1,5 +1,9 @@
 document.getElementById("us").addEventListener("click", getWeather);
-
+document.getElementById("me").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        getWeather();
+    }
+});
 
 async function getWeather() {
     //async:"It waits for something (API) before it continues.
@@ -32,8 +36,8 @@ async function catchme(data){
     if (!data) return;
     document.getElementById("temp").innerText = data.main.temp;
     document.getElementById("city").innerText = data.name;
-    document.getElementById("hum").innerText = data.main.humidity + "  % humidity";
-    document.getElementById("wind").innerText = data.wind.speed + "  km/h wind Speed";
+    document.getElementById("hum").innerText = data.main.humidity + " % humidity";
+    document.getElementById("wind").innerText = data.wind.speed + " km/h wind Speed";
      // 7. Change background color based on weather
      let weather = data.weather[0].main;
      console.log("Weather is: ", weather);
