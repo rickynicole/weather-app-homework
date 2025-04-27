@@ -8,7 +8,7 @@ API: https://goweather.herokuapp.com/weather/
 Build a weather viewer app where users can search for cities and view weather information.
 
 🎯 Requirements:
-
+ 
 1. Input Field
 Create an input field for users to type a city name
 TODO: Add input field code here
